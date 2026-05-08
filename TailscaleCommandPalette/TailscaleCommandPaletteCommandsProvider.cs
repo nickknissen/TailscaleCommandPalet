@@ -28,16 +28,16 @@ public partial class TailscaleCommandPaletteCommandsProvider : CommandProvider
         };
 
         _commands = [
-            new CommandItem(new TailscaleCommandPalettePage(service)) { Title = "All Devices", Icon = commandIcon },
-            new CommandItem(new MyDevicesPage(service)) { Title = "My Devices", Icon = commandIcon },
-            new CommandItem(new StatusPage(service)) { Title = "Status", Icon = commandIcon },
+            new CommandItem(new TailscaleCommandPalettePage(service)) { Title = "All Devices", Subtitle = "Tailscale", Icon = commandIcon },
+            new CommandItem(new MyDevicesPage(service)) { Title = "My Devices", Subtitle = "Tailscale", Icon = commandIcon },
+            new CommandItem(new StatusPage(service)) { Title = "Status", Subtitle = "Tailscale", Icon = commandIcon },
             new CommandItem(new ToggleConnectionCommand(service))
             {
                 Title = "Toggle Connection",
-                Subtitle = "Connect or disconnect this device",
+                Subtitle = "Tailscale",
                 Icon = commandIcon,
             },
-            new CommandItem(adminCommand) { Title = "Admin Console", Icon = commandIcon },
+            new CommandItem(adminCommand) { Title = "Admin Console", Subtitle = "Tailscale", Icon = commandIcon },
         ];
     }
 
